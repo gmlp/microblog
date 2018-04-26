@@ -1,3 +1,5 @@
+#sqlite db
+*.db
 #IDE
 .vscode/
 
