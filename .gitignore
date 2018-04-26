@@ -1,3 +1,5 @@
+#logs
+logs/
 #sqlite db
 *.db
 #IDE
