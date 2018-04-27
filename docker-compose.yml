@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  app:
+    build: .
+    environment:
+      - FLASK_APP=microblog.py
+      - FLASK_DEBUG=1
+      - MAIL_SERVER=mail
+      - MAIL_PORT=8025
+#      - MAIL_PORT=587
+#      - MAIL_USE_TLS=1
+#      - MAIL_USERNAME=<your_email_username>
+#      - MAIL_USERNAME=<your_email_password>
+    volumes:
+        - .:/usr/workdir
+    ports:
+      - 5000:5000
+    command: sleep 999999999
+#    command: flask run -h 0.0.0.0
+  
+  mail:
+    image: python:3.6.4-alpine3.7
+    command: python -m smtpd -n -c DebuggingServer 0.0.0.0:8025
+
