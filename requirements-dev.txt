@@ -1,0 +1,2 @@
+bpython==0.17.1
+flask-shell-bpython==1.0.0

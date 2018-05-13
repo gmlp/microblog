@@ -71,10 +71,10 @@ class UserModelCase(unittest.TestCase):
         db.session.commit()
 
         #check the followed post each user
-        f1 = u1.followed_post().all()
-        f2 = u2.followed_post().all()
-        f3 = u3.followed_post().all()
-        f4 = u4.followed_post().all()
+        f1 = u1.followed_posts().all()
+        f2 = u2.followed_posts().all()
+        f3 = u3.followed_posts().all()
+        f4 = u4.followed_posts().all()
 
         self.assertEqual(f1, [p2 , p4, p1])
         self.assertEqual(f2, [p2, p3])

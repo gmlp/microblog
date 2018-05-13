@@ -12,4 +12,5 @@ class Config:
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS')
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    ADMINS = ["gmlp.24a@gmail.com"]
+    ADMINS = ["admin@x.com"]
+    POST_PER_PAGE = 25 
