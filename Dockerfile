@@ -13,7 +13,7 @@ COPY ./requirements.txt requirements.txt
 COPY ./requirements-dev.txt requirements-dev.txt
 
 RUN apk update \
-    && apk add gcc g++ musl-dev python3-dev \
+    && apk add gcc g++ musl-dev python3-dev enchant \
     && pip install --no-cache-dir -r requirements.txt \
     && pip install --no-cache-dir -r requirements-dev.txt \
     && apk del gcc g++ musl-dev python3-dev \
